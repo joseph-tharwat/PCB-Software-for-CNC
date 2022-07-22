@@ -1,0 +1,500 @@
+# depslib dependency file v1.0
+1638906790 source:c:\users\mohamed atef\documents\ee school\data structures\tests\2019\pcbsoftware\main.cpp
+	<stdio.h>
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<gdiplus.h>
+	"resources.h"
+	"Header.h"
+
+1638565287 source:c:\users\mohamed atef\documents\ee school\data structures\tests\2019\pcbsoftware\resources.rc
+	"resources.h"
+
+1638565303 c:\users\mohamed atef\documents\ee school\data structures\tests\2019\pcbsoftware\resources.h
+
+1638906314 source:c:\users\mohamed atef\documents\ee school\data structures\tests\2019\pcbsoftware\source.cpp
+	"Header.h"
+
+1638780217 c:\users\mohamed atef\documents\ee school\data structures\tests\2019\pcbsoftware\header.h
+	<shobjidl.h>
+	<d2d1.h>
+	<math.h>
+	<stdio.h>
+
+1638565287 source:d:\books\faculty\4th\project\v1\pcbsoftware\resources.rc
+	"resources.h"
+
+1638565303 d:\books\faculty\4th\project\v1\pcbsoftware\resources.h
+
+1638975809 source:d:\books\faculty\4th\project\v1\pcbsoftware\source.cpp
+	"Header.h"
+
+1638975535 d:\books\faculty\4th\project\v1\pcbsoftware\header.h
+	<shobjidl.h>
+	<d2d1.h>
+	<math.h>
+	<stdio.h>
+
+1638975632 source:d:\books\faculty\4th\project\v1\pcbsoftware\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<gdiplus.h>
+	"resources.h"
+	"Header.h"
+	<stdio.h>
+
+1658094033 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1638983689 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\resources.h
+
+1649418348 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\source.cpp
+	"Header.h"
+
+1638999079 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\header.h
+	<shobjidl.h>
+	<d2d1.h>
+	<math.h>
+	<stdio.h>
+
+1658257473 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<shlwapi.h>
+	"cmds.h"
+	"tracebmp.h"
+	"tracecheck.h"
+	"app.h"
+	"resource.h"
+	"cmncontrols.h"
+	"maxCupper_loading.h"
+	"usb.h"
+	"mmgparse.h"
+	<stdio.h>
+
+1638998747 source:d:\books\faculty\4th\project\v1\v2\pcbsoftware_v2\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<gdiplus.h>
+	"resources.h"
+	"Header.h"
+	<stdio.h>
+
+1638983689 d:\books\faculty\4th\project\v1\v2\pcbsoftware_v2\resources.h
+
+1638999079 d:\books\faculty\4th\project\v1\v2\pcbsoftware_v2\header.h
+	<shobjidl.h>
+	<d2d1.h>
+	<math.h>
+	<stdio.h>
+
+1638985130 source:d:\books\faculty\4th\project\v1\v2\pcbsoftware_v2\resources.rc
+	"resources.h"
+
+1638998857 source:d:\books\faculty\4th\project\v1\v2\pcbsoftware_v2\source.cpp
+	"Header.h"
+
+1652223489 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\cmncontrols.h
+	<windows.h>
+	<windowsx.h>
+	<commctrl.h>
+
+1652223652 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\cmncontrols.cpp
+	"cmncontrols.h"
+
+1657919114 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\tracebmp.cpp
+	"tracebmp.h"
+
+1657915928 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\tracebmp.h
+	<string>
+	<vector>
+	<math.h>
+	<iostream>
+	"bitmap_image.hpp"
+
+946674000 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\bitmap_image.hpp
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	<iostream>
+	<iterator>
+	<limits>
+	<string>
+	<vector>
+
+1658066708 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\maxcupper_loading.h
+	<wincodec.h>
+	<objbase.h>
+	<combaseapi.h>
+	<winuser.h>
+	<windef.h>
+	<d2d1.h>
+	<d2d1helper.h>
+	<shlwapi.h>
+	<math.h>
+	<stdio.h>
+	"BMP.h"
+	"cmds.h"
+
+1650313914 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\bmp.h
+	<fstream>
+	<vector>
+	<stdexcept>
+	<iostream>
+
+1657916232 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\tracecheck.cpp
+	"tracecheck.h"
+
+1646434105 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\tracecheck.h
+	"tracebmp.h"
+	<cstdlib>
+
+1658094033 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\resource.h
+
+1658251912 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\app.cpp
+	"app.h"
+	<stdio.h>
+
+1658251957 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\app.h
+	<windows.h>
+	<windowsx.h>
+	<stdlib.h>
+	<stdio.h>
+	<tchar.h>
+	<string>
+	"tracebmp.h"
+	"tracecheck.h"
+	"resource.h"
+	"bitmap_image.hpp"
+	"cmncontrols.h"
+	"cmds.h"
+	"maxCupper_loading.h"
+	"mmgparse.h"
+
+1657977224 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\cmds.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+	"cmds.h"
+	<string>
+	<bitset>
+	<string.h>
+	<vector>
+
+1657977226 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\cmds.h
+	<vector>
+
+1657048724 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\usb.cpp
+	"usb.h"
+
+1656441933 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\usb.h
+	<libusb-1.0/libusb.h>
+	<stdio.h>
+
+1658073187 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\maxcupper_loading.cpp
+	"maxCupper_loading.h"
+	<stdio.h>
+
+1658087559 source:c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\mmgparse.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+	<string.h>
+	<vector>
+	"mmgparse.h"
+
+1658087804 c:\users\mohamed atef\documents\ee school\graduation project\windows software\pcbsoftware_v2\mmgparse.h
+	<vector>
+	"cmds.h"
+
+1658412173 source:d:\books\faculty\4th\project\complete 20-7-2022\app.cpp
+	"app.h"
+	<stdio.h>
+
+1658402739 d:\books\faculty\4th\project\complete 20-7-2022\app.h
+	<windows.h>
+	<windowsx.h>
+	<stdlib.h>
+	<stdio.h>
+	<tchar.h>
+	<string>
+	"tracebmp.h"
+	"tracecheck.h"
+	"resource.h"
+	"bitmap_image.hpp"
+	"cmncontrols.h"
+	"cmds.h"
+	"maxCupper_loading.h"
+	"mmgparse.h"
+
+1657915928 d:\books\faculty\4th\project\complete 20-7-2022\tracebmp.h
+	<string>
+	<vector>
+	<math.h>
+	<iostream>
+	"bitmap_image.hpp"
+
+946674000 d:\books\faculty\4th\project\complete 20-7-2022\bitmap_image.hpp
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	<iostream>
+	<iterator>
+	<limits>
+	<string>
+	<vector>
+
+1646434105 d:\books\faculty\4th\project\complete 20-7-2022\tracecheck.h
+	"tracebmp.h"
+	<cstdlib>
+
+1658411996 d:\books\faculty\4th\project\complete 20-7-2022\resource.h
+
+1652223489 d:\books\faculty\4th\project\complete 20-7-2022\cmncontrols.h
+	<windows.h>
+	<windowsx.h>
+	<commctrl.h>
+
+1657977226 d:\books\faculty\4th\project\complete 20-7-2022\cmds.h
+	<vector>
+
+1658318781 d:\books\faculty\4th\project\complete 20-7-2022\maxcupper_loading.h
+	<wincodec.h>
+	<objbase.h>
+	<combaseapi.h>
+	<winuser.h>
+	<windef.h>
+	<d2d1.h>
+	<d2d1helper.h>
+	<shlwapi.h>
+	<math.h>
+	<stdio.h>
+	"BMP.h"
+	"cmds.h"
+
+1650313914 d:\books\faculty\4th\project\complete 20-7-2022\bmp.h
+	<fstream>
+	<vector>
+	<stdexcept>
+	<iostream>
+
+1658087804 d:\books\faculty\4th\project\complete 20-7-2022\mmgparse.h
+	<vector>
+	"cmds.h"
+
+1658395429 source:d:\books\faculty\4th\project\complete 20-7-2022\cmds.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+	"cmds.h"
+	<string>
+	<bitset>
+	<string.h>
+	<vector>
+
+1652223652 source:d:\books\faculty\4th\project\complete 20-7-2022\cmncontrols.cpp
+	"cmncontrols.h"
+
+1658404736 source:d:\books\faculty\4th\project\complete 20-7-2022\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<shlwapi.h>
+	"cmds.h"
+	"tracebmp.h"
+	"tracecheck.h"
+	"app.h"
+	"resource.h"
+	"cmncontrols.h"
+	"maxCupper_loading.h"
+	"usb.h"
+	"mmgparse.h"
+	<stdio.h>
+
+1658306427 d:\books\faculty\4th\project\complete 20-7-2022\usb.h
+	<libusb.h>
+	<stdio.h>
+
+1658330038 source:d:\books\faculty\4th\project\complete 20-7-2022\maxcupper_loading.cpp
+	"maxCupper_loading.h"
+	<stdio.h>
+
+1658087559 source:d:\books\faculty\4th\project\complete 20-7-2022\mmgparse.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+	<string.h>
+	<vector>
+	"mmgparse.h"
+
+1658402712 source:d:\books\faculty\4th\project\complete 20-7-2022\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1657919114 source:d:\books\faculty\4th\project\complete 20-7-2022\tracebmp.cpp
+	"tracebmp.h"
+
+1657916232 source:d:\books\faculty\4th\project\complete 20-7-2022\tracecheck.cpp
+	"tracecheck.h"
+
+1658395283 source:d:\books\faculty\4th\project\complete 20-7-2022\usb.cpp
+	"usb.h"
+	<conio.h>
+
+1658415093 source:d:\books\faculty\4th\project\complete 21-7-2022\app.cpp
+	"app.h"
+	<stdio.h>
+
+1658413284 d:\books\faculty\4th\project\complete 21-7-2022\app.h
+	<windows.h>
+	<windowsx.h>
+	<stdlib.h>
+	<stdio.h>
+	<tchar.h>
+	<string>
+	"tracebmp.h"
+	"tracecheck.h"
+	"resource.h"
+	"bitmap_image.hpp"
+	"cmncontrols.h"
+	"cmds.h"
+	"maxCupper_loading.h"
+	"mmgparse.h"
+
+1657915928 d:\books\faculty\4th\project\complete 21-7-2022\tracebmp.h
+	<string>
+	<vector>
+	<math.h>
+	<iostream>
+	"bitmap_image.hpp"
+
+946674000 d:\books\faculty\4th\project\complete 21-7-2022\bitmap_image.hpp
+	<algorithm>
+	<cmath>
+	<cstdlib>
+	<cstring>
+	<fstream>
+	<iostream>
+	<iterator>
+	<limits>
+	<string>
+	<vector>
+
+1646434105 d:\books\faculty\4th\project\complete 21-7-2022\tracecheck.h
+	"tracebmp.h"
+	<cstdlib>
+
+1658411996 d:\books\faculty\4th\project\complete 21-7-2022\resource.h
+
+1652223489 d:\books\faculty\4th\project\complete 21-7-2022\cmncontrols.h
+	<windows.h>
+	<windowsx.h>
+	<commctrl.h>
+
+1657977226 d:\books\faculty\4th\project\complete 21-7-2022\cmds.h
+	<vector>
+
+1658419109 d:\books\faculty\4th\project\complete 21-7-2022\maxcupper_loading.h
+	<wincodec.h>
+	<objbase.h>
+	<combaseapi.h>
+	<winuser.h>
+	<windef.h>
+	<d2d1.h>
+	<d2d1helper.h>
+	<shlwapi.h>
+	<math.h>
+	<stdio.h>
+	"BMP.h"
+	"cmds.h"
+
+1650313914 d:\books\faculty\4th\project\complete 21-7-2022\bmp.h
+	<fstream>
+	<vector>
+	<stdexcept>
+	<iostream>
+
+1658087804 d:\books\faculty\4th\project\complete 21-7-2022\mmgparse.h
+	<vector>
+	"cmds.h"
+
+1658395429 source:d:\books\faculty\4th\project\complete 21-7-2022\cmds.cpp
+	<iostream>
+	<fstream>
+	<cmath>
+	"cmds.h"
+	<string>
+	<bitset>
+	<string.h>
+	<vector>
+
+1652223652 source:d:\books\faculty\4th\project\complete 21-7-2022\cmncontrols.cpp
+	"cmncontrols.h"
+
+1658420419 source:d:\books\faculty\4th\project\complete 21-7-2022\main.cpp
+	<tchar.h>
+	<windows.h>
+	<windowsx.h>
+	<Commdlg.h>
+	<shlwapi.h>
+	"cmds.h"
+	"tracebmp.h"
+	"tracecheck.h"
+	"app.h"
+	"resource.h"
+	"cmncontrols.h"
+	"maxCupper_loading.h"
+	"usb.h"
+	"mmgparse.h"
+	<stdio.h>
+
+1658306427 d:\books\faculty\4th\project\complete 21-7-2022\usb.h
+	<libusb.h>
+	<stdio.h>
+
+1658419045 source:d:\books\faculty\4th\project\complete 21-7-2022\maxcupper_loading.cpp
+	"maxCupper_loading.h"
+	<stdio.h>
+
+1658087559 source:d:\books\faculty\4th\project\complete 21-7-2022\mmgparse.cpp
+	<iostream>
+	<stdio.h>
+	<string>
+	<string.h>
+	<vector>
+	"mmgparse.h"
+
+1658413091 source:d:\books\faculty\4th\project\complete 21-7-2022\resources.rc
+	<windows.h>
+	<commctrl.h>
+	<richedit.h>
+	"resource.h"
+
+1657919114 source:d:\books\faculty\4th\project\complete 21-7-2022\tracebmp.cpp
+	"tracebmp.h"
+
+1657916232 source:d:\books\faculty\4th\project\complete 21-7-2022\tracecheck.cpp
+	"tracecheck.h"
+
+1658395283 source:d:\books\faculty\4th\project\complete 21-7-2022\usb.cpp
+	"usb.h"
+	<conio.h>
+

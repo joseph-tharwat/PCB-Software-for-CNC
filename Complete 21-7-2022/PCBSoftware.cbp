@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="PCBSoftware" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/PCBSoftware" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add option="-DDEBUG" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/PCBSoftware" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+		</Compiler>
+		<Linker>
+			<Add library="gdi32" />
+			<Add library="user32" />
+			<Add library="kernel32" />
+			<Add library="comctl32" />
+			<Add library="comdlg32" />
+			<Add library="gdiplus" />
+			<Add library="d2d1" />
+			<Add library="ole32" />
+			<Add library="windowscodecs" />
+			<Add library="usb-1.0" />
+			<Add library="shlwapi" />
+		</Linker>
+		<Unit filename="BMP.h" />
+		<Unit filename="app.cpp" />
+		<Unit filename="app.h" />
+		<Unit filename="bitmap_image.hpp" />
+		<Unit filename="cmds.cpp" />
+		<Unit filename="cmds.h" />
+		<Unit filename="cmncontrols.cpp" />
+		<Unit filename="cmncontrols.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="maxCupper_loading.cpp" />
+		<Unit filename="maxCupper_loading.h" />
+		<Unit filename="mmgparse.cpp" />
+		<Unit filename="mmgparse.h" />
+		<Unit filename="resource.h" />
+		<Unit filename="resources.rc">
+			<Option compilerVar="WINDRES" />
+		</Unit>
+		<Unit filename="tracebmp.cpp" />
+		<Unit filename="tracebmp.h" />
+		<Unit filename="tracecheck.cpp" />
+		<Unit filename="tracecheck.h" />
+		<Unit filename="usb.cpp" />
+		<Unit filename="usb.h" />
+		<Extensions />
+	</Project>
+</CodeBlocks_project_file>
