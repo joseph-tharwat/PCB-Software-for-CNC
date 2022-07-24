@@ -138,6 +138,7 @@ LRESULT CALLBACK WinProc_Draw(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
             scaleResize(hwnd,pRT,img_scale,origin_x,origin_y,D2DpBitmap);
 
             EndPaint(hwnd, &ps);
+            return DefWindowProc (hwnd, message, wParam, lParam);
         }
         break;
         case WM_LBUTTONDOWN:
@@ -201,23 +202,61 @@ LRESULT CALLBACK WinProc_Draw(HWND hwnd, UINT message, WPARAM wParam, LPARAM lPa
         }
         break;
 
-/*
-    case WM_KEYDOWN:
-            switch(wParam)
-            {
-            case VK_RCONTROL:
-                img_scale *= ZOOMOUT_FAC;
-                break;
-            case VK_LCONTROL:
-                img_scale *= ZOOMIN_FAC;
-                break;
-            }
-            break;
-*/
+    case WMU_ZOOMIN:
+        img_scale *= ZOOMIN_FAC;
+        char zoomstr[20];
+        sprintf_s(zoomstr, 20, "Zoom : %.1f%%", img_scale*100.0);
+        status_bar.UpdateText(4, zoomstr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
+
+    case WMU_ZOOMOUT:
+        img_scale *= ZOOMOUT_FAC;
+        //char zoomstr[20];
+        sprintf_s(zoomstr, 20, "Zoom : %.1f%%", img_scale*100.0);
+        status_bar.UpdateText(4, zoomstr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
+
+    case WMU_UP:
+        char xstr[20];
+        char ystr[20];
+        origin_y -= KEY_PAN_DELTA;
+        sprintf_s(xstr, 20, "Center X : %.1f", (-origin_x));
+        sprintf_s(ystr, 20, "Center Y : %.1f", (-origin_y));
+        status_bar.UpdateText(1, xstr);
+        status_bar.UpdateText(2, ystr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
+
+    case WMU_DOWN:
+        origin_y += KEY_PAN_DELTA;
+        sprintf_s(xstr, 20, "Center X : %.1f", (-origin_x));
+        sprintf_s(ystr, 20, "Center Y : %.1f", (-origin_y));
+        status_bar.UpdateText(1, xstr);
+        status_bar.UpdateText(2, ystr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
+
+    case WMU_LEFT:
+        origin_x += KEY_PAN_DELTA;
+        sprintf_s(xstr, 20, "Center X : %.1f", (-origin_x));
+        sprintf_s(ystr, 20, "Center Y : %.1f", (-origin_y));
+        status_bar.UpdateText(1, xstr);
+        status_bar.UpdateText(2, ystr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
+
+    case WMU_RIGHT:
+        origin_x -= KEY_PAN_DELTA;
+        sprintf_s(xstr, 20, "Center X : %.1f", (-origin_x));
+        sprintf_s(ystr, 20, "Center Y : %.1f", (-origin_y));
+        status_bar.UpdateText(1, xstr);
+        status_bar.UpdateText(2, ystr);
+        InvalidateRect(hwnd, NULL, FALSE);
+        break;
 
     case WM_RBUTTONDOWN:
-        img_scale *= ZOOMIN_FAC;
-        //scaleResize(hwnd,pRT,img_scale,origin_x,origin_y,D2DpBitmap);
         cout<<"rightClick"<<endl;
         if(RBDown) break;
         RBDown = true;
@@ -242,8 +281,9 @@ BOOL CALLBACK DlgProc_MaxCopper(HWND hwndDlg, UINT message, WPARAM wParam, LPARA
 
             /// Set the default values of the dialog
             //SetDlgItemText(hwndDlg, IDC_EDIT_PTOM, "0.1"); Not needed since the amount of mm per pixel is now not user editable
-            SetDlgItemText(hwndDlg, IDC_EDIT_ZTOP, "3");
-            SetDlgItemText(hwndDlg, IDC_EDIT_ZBOT, "-0.4");
+            SetDlgItemText(hwndDlg, IDC_EDIT_ZTOP, "2");
+            SetDlgItemText(hwndDlg, IDC_EDIT_ZBOT, "-0.1");
+            SetDlgItemText(hwndDlg, IDC_EDIT_ZHOLE, "-0.2");
 
             /// Populate the max speed combo box
             char tempArr[3] = "0";
@@ -308,7 +348,7 @@ BOOL CALLBACK DlgProc_MaxCopper(HWND hwndDlg, UINT message, WPARAM wParam, LPARA
                 }
             }
 
-            pResult->zTop = (atof(lpString)) / pResult->pixTomm;
+            pResult->zTop = round((atof(lpString)) / pResult->pixTomm);
 
             GetDlgItemText(hwndDlg, IDC_EDIT_ZBOT, lpString, 10);
             // Check that the string has only digits, minus sign, and decimal points
@@ -323,7 +363,22 @@ BOOL CALLBACK DlgProc_MaxCopper(HWND hwndDlg, UINT message, WPARAM wParam, LPARA
                 }
             }
 
-            pResult->zBottom = (atof(lpString)) / pResult->pixTomm;
+            pResult->zBottom = round((atof(lpString)) / pResult->pixTomm);
+
+            GetDlgItemText(hwndDlg, IDC_EDIT_ZHOLE, lpString, 10);
+            // Check that the string has only digits, minus sign, and decimal points
+            for(int i = 0; i < 10 && lpString[i] != 0; i++)
+            {
+                if(lpString[i] < '0' || lpString[i] > '9')
+                {
+                    if(lpString[i] != '-' && lpString[i] != '.')
+                    {
+                        pResult->valid = false;
+                    }
+                }
+            }
+
+            pResult->zHole = round((atof(lpString)) / pResult->pixTomm);
 
             GetDlgItemText(hwndDlg, IDC_EDIT_SPD, lpString, 10);
             pResult->maxSpd = atoi(lpString);
@@ -682,7 +737,7 @@ int App_BitmaptoMMG(bitmap_image* pTraceImage, std::string& mmg, const DlgStrct_
             }
         }
     }
-    pixCmds = TracePixelMatrix(&pm, result.zTop, result.zBottom);
+    pixCmds = TracePixelMatrix(&pm, result.zTop, result.zBottom, result.zHole);
     if(simplify)
         pixCmds = SimplifyCommandsXY(pixCmds);
     mmg = CommandsString(pixCmds, result.pixTomm, true);
@@ -727,7 +782,7 @@ int App_SaveImageFromPixCmds(const LPWSTR swzPath, const std::vector<Command>& p
     return 1;
 }
 
-int App_MMGtoCMDs(const std::string& mmg, std::vector<OutCommand>& cmds, std::vector<Command>& pixCmds, const float mmPerStep, const float pixTomm)
+int App_MMGtoCMDs(const std::string& mmg, std::vector<OutCommand>& cmds, std::vector<Command>& pixCmds, const float mmPerStep, const float pixTomm, const float mmPerStepZ)
 {
     //int stepPermm = round(1.0/mmPerStep);
 
@@ -739,15 +794,15 @@ int App_MMGtoCMDs(const std::string& mmg, std::vector<OutCommand>& cmds, std::ve
         cmpCmds[i].z = pixCmds[i].GetZ()*pixTomm;
     }
     SetMaxSpeed(7);
-    cmds = step_mov(cmpCmds, mmPerStep, mmPerStep, mmPerStep);
+    cmds = step_mov(cmpCmds, mmPerStep, mmPerStep, mmPerStepZ);
     return 1;
 }
 
-int App_MMGtoCMDs(const std::string& mmg, std::vector<OutCommand>& cmds, std::vector<CompressedCommand>& cmpCmds, const float mmPerStep)
+int App_MMGtoCMDs(const std::string& mmg, std::vector<OutCommand>& cmds, std::vector<CompressedCommand>& cmpCmds, const float mmPerStep, const float mmPerStepZ)
 {
     //int stepPermm = round(1.0/mmPerStep);
     SetMaxSpeed(7);
-    cmds = step_mov(cmpCmds, mmPerStep, mmPerStep, mmPerStep);
+    cmds = step_mov(cmpCmds, mmPerStep, mmPerStep, mmPerStepZ);
     return 1;
 }
 

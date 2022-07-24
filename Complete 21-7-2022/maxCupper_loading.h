@@ -770,6 +770,21 @@ ID2D1Bitmap* DrawGerberOnBitmab(
 );
 
 
+///without Maxcupper
+ID2D1Bitmap* DrawGerberOnBitmabWithoutMaxCupper(
+    HWND handeller_to_window,
+    char* str,
+    char* profileStr,
+    char* DrillsStr,
+    float scale ,//each pixel have scale mm
+    /*ID2D1Factory* pFactory_,
+    ID2D1RenderTarget* pWicRenderTarget_,
+    IWICImagingFactory* wicFactory_,
+    IWICBitmap* pBitmap_,
+    ID2D1SolidColorBrush* pWicBrush,*/
+    bool xln_grb /*= true*/
+    );
+
 
 
 /// <summary>
